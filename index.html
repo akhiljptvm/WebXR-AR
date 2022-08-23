@@ -77,19 +77,19 @@
 
       document.addEventListener('onARSupportedCheck', function (event) {
         enterARButton.disabled = !event.detail.supported;
-        unityInstance.Module.WebXR.toggleAR();
+        // unityInstance.Module.WebXR.toggleAR();
       }, false);
       document.addEventListener('onVRSupportedCheck', function (event) {
         enterVRButton.disabled = !event.detail.supported;
-        unityInstance.Module.WebXR.toggleVR();
+        // unityInstance.Module.WebXR.toggleVR();
       }, false);
 
-      // enterARButton.addEventListener('click', function (event) {
-      //   unityInstance.Module.WebXR.toggleAR();
-      // }, false);
-      // enterVRButton.addEventListener('click', function (event) {
-      //   unityInstance.Module.WebXR.toggleVR();
-      // }, false);
+      enterARButton.addEventListener('click', function (event) {
+        unityInstance.Module.WebXR.toggleAR();
+      }, false);
+      enterVRButton.addEventListener('click', function (event) {
+        unityInstance.Module.WebXR.toggleVR();
+      }, false);
     </script>
   </body>
 </html>
