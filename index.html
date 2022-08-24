@@ -25,7 +25,7 @@
      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
 
      <a-assets>
-        <a-asset-item id="butterFly" src="UVblendingBOX.glb"></a-asset-item>
+        <a-asset-item id="butterFly"  src="UVblendingBOX.glb"></a-asset-item>
       </a-assets>
        <!-- <a-assets> 
         
@@ -40,12 +40,13 @@
 
         <a-entity
         class="clickable"
-        scale="0.50 0.50 0.50"
-        position="0 0 0"
-        rotation="90 0 0"
+        scale="0.35 0.35 0.35"
+        gps-entity-place="latitude: 27.2046N; longitude: 77.4977E;"
+        rotation="0 360 0"
         gltf-model="#butterFly"
         look-at="[gps-camera]"
         animation-mixer
+        animation="property: rotation; to: 0 360 0; loop: true; dur: 10000"
       ></a-entity>
 
         <!-- gps-entity-place="latitude: <add-your-latitude>; longitude: <add-your-longitude>;" -->
