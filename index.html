@@ -8,6 +8,7 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 
     <script>
         window.onload = () => {
@@ -23,11 +24,31 @@
      embeded
      arjs="sourceType: webcam; videoTexture: true; debugUIEnabled: false;">
 
-        <a-text
+     <a-assets>
+        <a-asset-item id="butterFly" src="btFLY.glb"></a-asset-item>
+      </a-assets>
+       <!-- <a-assets> 
+        
+        <a-assets/> -->
+
+        <!-- <a-text
          value="This content will always face you."
          look-at="[gps-camera]" 
-         scale="5 5 5">      
-        </a-text>
+         scale="5 5 5"
+        rotation="0 0 0">      
+        </a-text> -->
+
+        <a-entity
+        rotation="0 0 0"
+        class="clickable"
+        scale="3 3 3"
+        position="0 0 0"
+        rotation="10 0 0"
+        gltf-model="#butterFly"
+        look-at="[gps-camera]"
+        animation-mixer
+      ></a-entity>
+
         <!-- gps-entity-place="latitude: <add-your-latitude>; longitude: <add-your-longitude>;" -->
         <a-camera gps-camera rotation-reader> </a-camera>
     </a-scene>
